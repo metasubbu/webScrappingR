@@ -25,7 +25,7 @@ front_url<-"https://www.youtube.com/results?search_query=mahabharat+11th+june+20
 		
 		#unavailable.message<-xpathSApply(view.html,"//h1[@id='unavailable-message']",xmlValue)
 		#view count
-		view.count<-xpathSApply(view.html,"//span[@class='watch-view-count']",xmlValue)
+		view.count<-xpathSApply(view.html,"//div[@class='watch-view-count']",xmlValue)
 		if(length(view.count)>0){
 			YouMah$view.count[vid]<-gsub("\\.","",view.count)
 		}else{
